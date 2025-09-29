@@ -10,7 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: printing value
-              run: echo "the value of var1 is ${{vars.var1}}"
+              run: echo "the value of var1 is ${{vars.var1}}" $$ echo "te secret value is ${{secrets.sec1}}"
             - name: step two
               run: sleep 10 && echo "This is step two"
             - name: step three
